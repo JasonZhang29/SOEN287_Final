@@ -1,0 +1,47 @@
+#nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 160px;
+  background-color: #9a0d0d;
+  float: right;
+  border: 2px solid #ecd01d;
+}
+
+#nav li {
+  text-align: center;
+}
+
+#nav li a {
+  display: block;
+  color: #ecd01d;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-size: 120%;
+}
+
+#nav li a:hover {
+  background-color: #555;
+  color: white
+}
+
+#home {
+  height: auto;
+  width: auto;
+  max-width: 160px;
+  max-height: 24px;
+}
+
+img {
+  height: auto;
+  width: 100vmax;
+}
+
+em, strong {
+  color: deeppink;
+}
+
+body {
+  font-size: large;
+  color: blueviolet;
+}

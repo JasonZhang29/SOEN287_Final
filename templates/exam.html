@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+        <meta charset="UTF-8">
+        <title>{% block title %}{% endblock %} - SOEN287-S Take-Home Final Exam</title>
+        <link rel="stylesheet" type="text/css" href="/static/exam.css">
+    {% endblock %}
+</head>
+
+<body>
+{% block content %}
+    <h1>SOEN287 Take-Home Final Exam</h1>
+    <ul id="nav">
+        <li><a href="/"><img id="home" src="/static/home.jpeg" alt="Home"></a></li>
+        <li><a href="/q1">Question 1</a></li>
+        <li><a href="/q2">Question 2</a></li>
+        <li><a href="/q3">Question 3</a></li>
+        <li><a href="/q4">Question 4</a></li>
+    </ul>
+{% endblock %}
+
+{% block prelink %}
+    {% if page == 'q1' %}
+    <h6></h6>
+    {% elif page == 'q2' %}
+    <h6><a href="/q1">Question 1</a></h6>
+    {% elif page == 'q3' %}
+    <h6><a href="/q2">Question 2</a></h6>
+    {% elif page == 'q4' %}
+    <h6><a href="/q3">Question 3</a></h6>
+    {% else %}
+    <h6></h6>
+    {% endif %}
+{% endblock %}
+
+{% block question %}
+    <h1></h1>
+{% endblock %}
+
+{% block postlink %}
+    {% if page == 'q1' %}
+    <h6></h6>
+    <h6><a href="/q2">Question 2</a></h6>
+    {% elif page == 'q2' %}
+    <h6><a href="/q3">Question 3</a></h6>
+    {% elif page == 'q3' %}
+    <h6><a href="/q4">Question 4</a></h6>
+    {% elif page == 'q4' %}
+    <h6></h6>
+    {% else %}
+    <h6></h6>
+    {% endif %}
+{% endblock %}
+
+{% block footer %}
+    <p>Name: Xin Yuan Zhang</p>
+    <p>ID: 26373127</p>
+    <p>Email: xinyuanzhang29@gmail.com</p>
+    <p>Title: Computer Science program in Concordia</p>
+    <p>Description: </p>
+    <p>Computer Science is the study and design of computer systems: hardware and software. Computer scientists are primarily concerned with the design of algorithms, languages, hardware architecture, systems software, applications software and tools. Applications range from simple game playing to the control of space vehicles, power plants and factories, from banking machines to intelligent fault and medical diagnosis. Computer professionals, in short, are concerned with the creation of computer and information systems for the benefit of society.</p>
+    <img src="/static/website.png" alt="website">
+{% endblock %}
+</body>
+</html>

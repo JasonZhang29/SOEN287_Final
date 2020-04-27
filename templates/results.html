@@ -1,0 +1,76 @@
+{% extends 'exam.html' %}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+{% block title %}
+<title>Survey Results</title>
+{% endblock %}
+{% block content %}
+    {{ super() }}
+<div>
+    <table border="1" >
+    <caption>Survey Statistics</caption>
+        <tr>
+            <th>Total number of survey</th>
+            <td>{{ list[0] }}</td>
+        </tr>
+        <tr>
+            <th>Total number of anonymous</th>
+            <td>{{ list[1] }}</td>
+        </tr>
+        <tr>
+            <th>Percentage of anonymous</th>
+            <td>{{ list[2] }}</td>
+        </tr>
+        <tr>
+            <th>Total number of a</th>
+            <td>{{ list[3] }}</td>
+        </tr>
+        <tr>
+            <th>Total number of b</th>
+            <td>{{ list[4] }}</td>
+        </tr>
+        <tr>
+            <th>Total number of c</th>
+            <td>{{ list[5] }}</td>
+        </tr>
+        <tr>
+            <th>Total number of d</th>
+            <td>{{ list[6] }}</td>
+        </tr>
+        <tr>
+            <th>Percentage of a</th>
+            <td>{{ list[7] }}</td>
+        </tr>
+        <tr>
+            <th>Percentage of b</th>
+            <td>{{ list[8] }}</td>
+        </tr>
+        <tr>
+            <th>Percentage of c</th>
+            <td>{{ list[9] }}</td>
+        </tr>
+        <tr>
+            <th>Percentage of d</th>
+            <td>{{ list[10] }}</td>
+        </tr>
+    </table>
+</div>
+<div>
+    <table border="1">
+    <caption>Survey Results</caption>
+
+    {% for row in rows %}
+    <tr>
+        <td>{{ row[0] }}</td>
+        <td>{{ row[1] }}</td>
+        <td>{{ row[2] }}</td>
+        <td>{{ row[3] }}</td>
+    </tr>
+    {% endfor %}
+
+    </table>
+</div>
+{% endblock %}
+{% block footer %}
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'exam.html' %}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+{% block title %}
+<title>Survey Form</title>
+{% endblock %}
+{% block content %}
+<form method="POST">
+    <div>{{ form.hidden_tag() }}</div>
+    <div>{{ form.email.label }} {{ form.email() }}</div>
+    <div>{{ form.hidden.label }} {{ form.hidden() }}</div>
+    <div>{{ form.color.label }} {{ form.color() }}</div>
+    <div>{{ form.season.label }} {{ form.season() }}</div>
+    {{ form.submit() }}
+</form>
+{% endblock %}
+{% block footer %}
+{% endblock %}
