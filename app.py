@@ -57,6 +57,11 @@ def q3():
 def q4():
     page = 'q4'
     return render_template('q4.html', page=page)
+
+
+@app.route('/codes')
+def codes():
+    return render_template('codes.html')
 # End of the 4 questions templates
 
 

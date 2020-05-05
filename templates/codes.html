@@ -1,0 +1,36 @@
+{% extends 'exam.html' %}
+
+{% block title %}<title>Codes</title>
+{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <script src="/static/codes.js"></script>
+{% endblock %}
+
+{% block content %}
+    <br><label for="countries">Choose a country:</label><br>
+    <select id="countryList" onchange="selectCountry()">
+      <option value="Brazil" selected>Brazil</option>
+      <option value="Canada">Canada</option>
+      <option value="China">China</option>
+      <option value="Thailand">Thailand</option>
+      <option value="United Kingdom">United Kingdom</option>
+    </select>
+    <br><input type="text" id="postalCode">
+    <button id="validate" onclick="validatePostalCode()">Validate PostalCode</button><br>
+
+    <a id="countryLink" href="https://www.google.com/maps/place/Brazil"><img src="/static/Brazil.jpg" id='countryFlag'></a>
+{% endblock %}
+
+{% block prelink %}
+{% endblock %}
+
+{% block question %}
+{% endblock %}
+
+{% block postlink %}
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
